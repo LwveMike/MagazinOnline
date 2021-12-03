@@ -1,0 +1,22 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --primary: #333333;
+  --secondary: #faff97;
+  --body: #23272a;
+  --brand: #787474;
+  --cart: #ff5c58;
+  --close: #bd2c00;
+}
+
+body {
+  background-color: var(--body);
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,132 @@
+@import "global.css";
+
+.my-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-left: 32px;
+  padding-right: 32px;
+  background-color: var(--primary);
+  border-bottom: 1px solid white;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#logo {
+  font-family: "Righteous", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  letter-spacing: 1px;
+  user-select: none;
+  cursor: pointer;
+  color: var(--primary);
+  text-shadow: 1px 0 0 var(--secondary), -1px 0 0 var(--secondary),
+    0 1px 0 var(--secondary), 0 -1px 0 var(--secondary),
+    0.5px 0.5px var(--secondary), -0.5px -0.5px 0 var(--secondary),
+    0.5px -0.5px 0 var(--secondary), -0.5px 0.5px 0 var(--secondary);
+  margin: 0;
+  margin-right: 64px;
+  margin-left: 64px;
+}
+
+.mini-navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mini-navbar-item {
+  padding: 4px 8px;
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.mini-navbar-link {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.mini-navbar-link::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--secondary);
+  transition: width 0.3s;
+}
+
+.mini-navbar-link:hover::before {
+  width: 100%;
+}
+
+.mini-navbar-link:hover {
+  color: white;
+}
+
+.fixed-element {
+  cursor: pointer;
+  display: grid;
+  place-items: center center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.menu-icon {
+  font-size: 18px;
+  color: var(--secondary);
+}
+
+.user-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.username {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 0;
+  margin-left: 8px;
+}
+.list-group-item {
+  cursor: pointer;
+}
+
+.modal-content {
+  background-color: var(--primary);
+}
+
+#registerModalLabel,
+#loginModalLabel {
+  color: white;
+}
+
+.form-btns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 18px auto;
+}
+
+form label {
+  color: white;
+  margin-bottom: 4px;
+}
+
+.alert {
+  text-align: center;
+}
