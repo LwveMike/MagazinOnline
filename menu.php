@@ -95,7 +95,7 @@ include "head.php";
                     </div>
                     <div class="btn-group form-btns">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Sign up</button>
+                        <button type="submit" class="btn btn-primary">Register</button>
                     </div>
                 </form>
             </div>
@@ -126,7 +126,7 @@ include "head.php";
                     </div>
                     <div class="btn-group form-btns">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Sign up</button>
+                        <button type="submit" class="btn btn-primary">Login</button>
                     </div>
                 </form>
             </div>

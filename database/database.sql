@@ -22,24 +22,32 @@ CREATE TABLE users (
 
 CREATE TABLE cart_items (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    FOREIGN KEY (user_id) 
+        REFERENCES users(id) 
+        ON DELETE CASCADE,
+
     product_id INT,
     FOREIGN KEY (product_id) 
         REFERENCES products(id)
-        ON DELETE CASCADE
+        ON DELETE CASCADE,
+
+    quantity INT NOT NULL
+    
 );
 
-CREATE TABLE cart (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
-    cart_item_id INT,
-     FOREIGN KEY (user_id) 
-        REFERENCES users(id) 
-        ON DELETE CASCADE,
+-- CREATE TABLE cart (
+--     id INT AUTO_INCREMENT PRIMARY KEY,
+--     user_id INT,
+--     cart_item_id INT,
+--      FOREIGN KEY (user_id) 
+--         REFERENCES users(id) 
+--         ON DELETE CASCADE,
     
-    FOREIGN KEY (cart_item_id) 
-        REFERENCES cart_items(id) 
-        ON DELETE CASCADE
-);
+--     FOREIGN KEY (cart_item_id) 
+--         REFERENCES cart_items(id) 
+--         ON DELETE CASCADE
+-- );
 
 
 
@@ -50,6 +58,11 @@ VALUES ('Jacketa SoA','https://www.marveljacket.com/wp-content/uploads/2020/10/c
        ('Scurta de iarna', 'https://staff-clothes.md/image/cache/catalog/DSS0101/f8cfd5e5ef6a4fdc828740a9d4e45562-700x922.jpeg', 'Linella',30, 'women', 'winter'),
        ('Sandale', 'https://belenka.bwcdn.net/media/2020/05/2/1/barefoot-sandale-be-lenka-grace-gold-2072-size-large-v-1.jpg', 'Boss',1400, 'women', 'boots');
 
+-- Legam produsele de cart items
+
+INSERT INTO cart_items (user_id, product_id, quantity)
+VALUES (1, 1, 1),
+       (1, 2, 3);
 
     
 

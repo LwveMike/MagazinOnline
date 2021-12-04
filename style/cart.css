@@ -32,9 +32,23 @@ p {
 .decrement,
 .increment {
   cursor: pointer;
+  display: inline-block;
+  user-select: none;
+  padding: 8px 16px;
   margin: 6px;
 }
 
+.currency {
+  margin-left: 6px;
+}
+
+.delete {
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  padding: 6px 12px;
+  margin-left: 6px;
+}
 .card {
   margin: auto;
   max-width: 950px;
@@ -149,7 +163,6 @@ input:focus::-webkit-input-placeholder {
   box-shadow: none;
   color: white;
   -webkit-box-shadow: none;
-  -webkit-user-select: none;
   transition: none;
 }
 
