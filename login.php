@@ -16,7 +16,7 @@ if (!empty($_POST)) {
         die('Completati va rog toate campurile !');
     }
 
-    $sqli = "SELECT username, password, role FROM users WHERE username = '{$data['username']}'";
+    $sqli = "SELECT id, username, password, role FROM users WHERE username = '{$data['username']}'";
     $res = $con->query($sqli);
     if ($res->num_rows !== 0) {
         $credentials = $res->fetch_all(MYSQLI_ASSOC)[0];
@@ -24,9 +24,11 @@ if (!empty($_POST)) {
 
             $uName = $credentials['username'];
             $uRole = $credentials['role'];
+            $uId = $credentials['id'];
 
             $_SESSION['username'] = $uName;
             $_SESSION['role'] = $uRole;
+            $_SESSION['id'] = $uId;
 
             echo "<script>
                 window.location.replace('/lwvemike/MagazinOnline/');

@@ -1,0 +1,13 @@
+.edit-form {
+  width: 60vw;
+  margin: 60px auto;
+}
+
+.form-title {
+  text-align: center;
+  color: white;
+}
+
+.update-btn {
+  margin-top: 10px;
+}

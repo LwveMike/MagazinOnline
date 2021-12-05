@@ -34,15 +34,17 @@ if (!empty($_POST)) {
                   </div>";
 
 
-            $getUserInfo = "SELECT username, role FROM users WHERE username = '{$data['username']}'";
+            $getUserInfo = "SELECT id, username, role FROM users WHERE username = '{$data['username']}'";
             $userInfoRes = $con->query($getUserInfo);
             $userInfo = $userInfoRes->fetch_all(MYSQLI_ASSOC)[0];
 
             $uName = $userInfo['username'];
             $uRole = $userInfo['role'];
+            $uId = $userInfo['id'];
 
             $_SESSION['username'] = $uName;
             $_SESSION['role'] = $uRole;
+            $_SESSION['id'] = $uId;
 
             echo "<script>
             window.location.replace('/lwvemike/MagazinOnline/');

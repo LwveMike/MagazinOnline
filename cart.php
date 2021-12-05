@@ -30,12 +30,7 @@ if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
             <div class="title">
                 <div class="row">
                     <?php
-                    $username = $_SESSION['username'];
-                    $getUserId = "SELECT id FROM users WHERE username = '{$username}'";
-                    $result = $con->query($getUserId);
-                    $res = $result->fetch_all(MYSQLI_ASSOC)[0];
-
-                    $userId = $res['id'];
+                    $userId = $_SESSION['id'];
 
                     $totalItems = "SELECT cart_items.id, cart_items.quantity, products.name, products.url, products.price, products.sub_category FROM cart_items
                                    JOIN products
