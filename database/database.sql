@@ -5,9 +5,9 @@ id INT AUTO_INCREMENT PRIMARY KEY,
 name VARCHAR(100) NOT NULL,
 url TEXT NOT NULL,
 brand VARCHAR(100) NOT NULL,
-description TEXT DEFAULT 'Lorem ipsum dolor sit amet
+description TEXT DEFAULT "Lorem ipsum dolor sit amet
                     consectetur adipisicing elit. Ad officia necessitatibus
-                    voluptatum autem aliquid aspernatur.',
+                    voluptatum autem aliquid aspernatur.",
 price FLOAT NOT NULL,
 category VARCHAR(255) NOT NULL,
 sub_category VARCHAR(255) NOT NULL

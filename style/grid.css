@@ -1,6 +1,7 @@
 @import "global.css";
 
 .container-grid {
+  width: 90vw;
   margin: 20px auto;
   display: grid;
   grid-template-columns: repeat(4, 20vw);
@@ -8,6 +9,7 @@
 }
 
 .product {
+  position: relative;
   padding: 6px;
   background-color: var(--primary);
   border-radius: 4px;
@@ -83,4 +85,48 @@
 
 .add-to-cart-btn:focus {
   background-color: #f7fd8a;
+}
+.add-new-item {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#addItemModalLabel {
+  color: white;
+}
+
+.btns {
+  margin-top: 20px;
+}
+.add-new-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: background-color 300ms ease;
+}
+
+.add-new-item-icon {
+  color: var(--secondary);
+}
+
+.del-item {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  color: var(--secondary);
+  background-color: var(--close);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }

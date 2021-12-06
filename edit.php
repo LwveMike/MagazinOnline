@@ -26,7 +26,7 @@ if (!isset($_SESSION['username']) || empty($_SESSION['username']) || $_SESSION['
         if ($result = $con->query($getItemData)) {
             $response = $result->fetch_all(MYSQLI_ASSOC);
             if (count($response) > 0) {
-                echo "<form class='edit-form'>
+                echo "<form class='edit-form' data-id='{$pid}'>
                     <h1 class='form-title'>Update Item</h1>
                     <div class='form-group'>
                         <label for='name'>Product Name</label>
@@ -57,7 +57,7 @@ if (!isset($_SESSION['username']) || empty($_SESSION['username']) || $_SESSION['
                         <input type='number' class='form-control' id='price' aria-describedby='price' placeholder='Price' min='10' max='2000'>
                     </div>
                     <div class='text-center'>
-                    <button  class='btn btn-success update-btn'>Update</button>
+                    <button class='btn btn-success update-btn'>Update</button>
                     </div>
                 </form>";
             } else {

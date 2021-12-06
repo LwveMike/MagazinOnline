@@ -13,4 +13,24 @@ editItemsArr.forEach((editBtn) => {
                     }
         });
     })
+});
+
+const delItems = $('.del-item');
+const delItemsArr = [...delItems];
+
+
+delItemsArr.forEach((btn) => {
+   btn.addEventListener('click', (e) => {
+        const id = btn.getAttribute('data-id');
+        e.target.parentElement.parentElement.remove();
+
+        $.ajax({
+            type : "POST", 
+            url  : "delitem.php",
+            data : { id: id},
+            success: function(res){  
+                    }
+        });
+
+    })
 })

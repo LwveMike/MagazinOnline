@@ -1,6 +1,9 @@
 $('.update-btn').on('click', (e) => {
     e.preventDefault();
-    const productName = $('#product-name').val();
+
+    const pid = $("form[data-id]").attr('data-id');
+
+    const name = $('#product-name').val();
     const url = $('#url').val();
     const brand = $('#brand').val();
     const category = $('#category').val();
@@ -9,16 +12,25 @@ $('.update-btn').on('click', (e) => {
     const price = $('#price').val();
 
     let obj = {
-        productName, url, brand, category, subCategory, description, price
+       id: pid,
+       name: name,
+       url: url,
+       brand: brand,
+       category: category,
+       'sub-category': subCategory,
+       description: description,
+       price: price
     }
 
-    
 
     $.ajax({
-        type : "GET", 
-        url  : "edit.php",
+        type : "POST", 
+        url  : "updateitem.php",
+        data : {...obj},
         success: function(res){
-            window.location.href = `edit.php?id=${productId}`;
+            setTimeout(() => {
+                window.location.href = '/lwvemike/MagazinOnline/';
+            }, 1000);
                 }
     });
 })
