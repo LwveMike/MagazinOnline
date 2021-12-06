@@ -1,4 +1,4 @@
 <?php
 include "menu.php";
-include "./grids/all.php";
+include "./grids/men.php";
 include "grid.php";

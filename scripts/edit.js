@@ -7,7 +7,7 @@ $('.update-btn').on('click', (e) => {
     const url = $('#url').val();
     const brand = $('#brand').val();
     const category = $('#category').val();
-    const subCategory = $('#subcategory').val();
+    const subCategory = $('#sub_category').val();
     const description = $('#description').val();
     const price = $('#price').val();
 
@@ -17,7 +17,7 @@ $('.update-btn').on('click', (e) => {
        url: url,
        brand: brand,
        category: category,
-       'sub-category': subCategory,
+       sub_category: subCategory,
        description: description,
        price: price
     }

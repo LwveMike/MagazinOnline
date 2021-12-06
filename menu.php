@@ -42,11 +42,11 @@ include "head.php";
     <nav class="navigation">
         <div class="mini-navbar">
             <div class="mini-navbar-item">
-                <a href="#" class="mini-navbar-link">Men</a>
+                <a href="men.php" class="mini-navbar-link">Men</a>
             </div>
 
             <div class="mini-navbar-item">
-                <a href="#" class="mini-navbar-link">Women</a>
+                <a href="women.php" class="mini-navbar-link">Women</a>
             </div>
         </div>
 
@@ -56,11 +56,11 @@ include "head.php";
 
         <div class="mini-navbar">
             <div class="mini-navbar-item">
-                <a href="#" class="mini-navbar-link">Teenagers</a>
+                <a href="teenagers.php" class="mini-navbar-link">Teenagers</a>
             </div>
 
             <div class="mini-navbar-item">
-                <a href="#" class="mini-navbar-link">kids</a>
+                <a href="kids.php" class="mini-navbar-link">kids</a>
             </div>
         </div>
     </nav>

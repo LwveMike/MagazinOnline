@@ -46,7 +46,7 @@ if (!isset($_SESSION['username']) || empty($_SESSION['username']) || $_SESSION['
                     </div>
                     <div class='form-group'>
                         <label for='subcategory'>SubCategory</label>
-                        <input type='text' class='form-control' id='subcategory' aria-describedby='subcategory' placeholder='SubCategory'>
+                        <input type='text' class='form-control' id='sub_category' aria-describedby='subcategory' placeholder='SubCategory'>
                     </div>
                     <div class='form-group'>
                         <label for='description'>Description</label>

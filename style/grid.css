@@ -6,6 +6,7 @@
   display: grid;
   grid-template-columns: repeat(4, 20vw);
   gap: 16px;
+  justify-content: center;
 }
 
 .product {

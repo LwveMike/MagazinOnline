@@ -22,9 +22,6 @@
         }
     }
 
-    $sqli = "SELECT * FROM products";
-    $res = $con->query($sqli);
-    $data = $res->fetch_all(MYSQLI_ASSOC);
 
     foreach ($data as $row) {
 
